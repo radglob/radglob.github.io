@@ -1,0 +1,5 @@
+baseURL = "https://radglob.com"
+disablePathToLower = true
+languageCode = "en-us"
+title = "Everything Awesome"
+theme = "noteworthy"

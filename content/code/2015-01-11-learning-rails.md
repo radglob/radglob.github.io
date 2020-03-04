@@ -1,12 +1,9 @@
----
-categories:
-- Ruby
-date: "2015-01-11T00:00:00Z"
-tags:
-- ruby
-- rails
-title: Learning Rails, Day 1
----
++++
+categories = ["ruby"]
+date = "2015-01-11T00:00:00Z"
+tags = ["ruby", "rails"]
+title = "Learning Rails, Day 1"
++++
 
 I noticed a trend. Clojure is awesome. And most Clojurists seem to use Rails. As such, I thought it would be worth
 investigating for myself.

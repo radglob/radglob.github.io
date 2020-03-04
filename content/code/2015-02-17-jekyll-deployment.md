@@ -1,13 +1,8 @@
----
-date: "2015-02-17T00:00:00Z"
-published: true
-tags: 
-- jekyll
-- ruby
-- travis
-- ci
-title: Deploying Jekyll with Travis CI
----
++++
+date = "2015-02-17T00:00:00Z"
+tags = ["jekyll", "ruby", "travis", "ci"]
+title = "Deploying Jekyll with Travis CI"
++++
 
 **Edited on 16 April 2018. Thanks to [@kellertuer](https://twitter.com/kellertuer)
 for pointing out the error in the `find` command.**

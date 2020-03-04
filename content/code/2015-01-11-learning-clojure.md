@@ -1,12 +1,9 @@
----
-categories:
-- clojure
-date: "2015-01-11T00:00:00Z"
-tags:
-- clojure
-- functional programming
-title: Learning Clojure
----
++++
+categories = ["clojure"]
+date = "2015-01-11T00:00:00Z"
+tags = ["clojure", "functional programming"]
+title = "Learning Clojure"
++++
 
 About a year back, I took a programming languages class. I think it was a
 pretty standard course: boot camp style introduction to several languages
