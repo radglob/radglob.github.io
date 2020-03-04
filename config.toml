@@ -3,3 +3,24 @@ disablePathToLower = true
 languageCode = "en-us"
 title = "Everything Awesome"
 theme = "noteworthy"
+paginate = 5
+
+[taxonomies]
+tag = "tags"
+
+[params]
+email = "mailto:hello@radglob.com"
+twitter = "https://twitter.com/radglob"
+github = "https://github.com/radglob"
+
+[[menu.main]]
+identifier = "about"
+url = "/about"
+name = "About"
+weight = 1
+
+[privacy]
+  [privacy.twitter]
+  disable = false
+  enableDNT = false
+  simple = false
