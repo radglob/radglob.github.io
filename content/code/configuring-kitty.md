@@ -12,9 +12,10 @@ two systems.
 
 <!--more-->
 
-I've been using [FiraCode]() as my monospaced font for a while, and needed a
-terminal emulator that supported ligatures. On MacOS, [iTerm2]() handled this,
-but the default GNOME terminal did not. [kitty]() is a super fast terminal that
+I've been using [FiraCode](https://github.com/tonsky/FiraCode) as my monospaced
+font for a while, and needed a terminal emulator that supported ligatures. On
+MacOS, [iTerm2](https://iterm2.com) handled this, but the default GNOME terminal
+did not. [kitty](https://sw.kovidgoyal.net/kitty/) is a super fast terminal that
 works on both systems, so I gave that a try.
 
 The speed was the first thing that blew me away. Despite having relatively
@@ -24,10 +25,10 @@ configuration is just a small file (or series of files) that are very well
 documented and easy for me to understand.
 
 I did run into one issue that took me a little bit of time to solve. I installed
-FiraCode with the [NerdFonts]() project. I'm not sure if this is an issue with
-`CoreText`, `fontconfig`, how `kitty` uses either one, or something else, but
-despite installing the same font files on both systems, `kitty` recognized the
-font files with different names.
+FiraCode with the [NerdFonts](https://www.nerdfonts.com/) project. I'm not sure
+if this is an issue with `CoreText`, `fontconfig`, how `kitty` uses either one,
+or something else, but despite installing the same font files on both systems,
+`kitty` recognized the font files with different names.
 
 In `kitty.conf`, the main system font is declared with `font_family`.
 ```
