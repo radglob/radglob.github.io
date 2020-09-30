@@ -21,6 +21,7 @@ the same. Take it with a grain of salt, and please do your own research if you c
 
 The questions on this year's ballot are as follows:
 
+[Elections](#elections)
 - [US President and Vice President - **Biden/Harris**](#president-and-vice-president)
 - [Baltimore City Council President - **Nick Mosby**](#baltimore-city-council-president)
 - [Comptroller - **Bill Henry**](#comptroller)
@@ -29,28 +30,35 @@ The questions on this year's ballot are as follows:
 - [8th Circuit Court Judges - **Sampson can GTFO**](#8th-circuit-court-judges)
 - [US Congressional Seat - **Kweisi Mfume**](#us-congress) (this will differ based on your congressional district)
 - [Judge, Court of Special Appeals at Large - **Yes**](#court-of-special-appeals-at-large)
-- [Question 1](#question-1)
-- Question 2
-- Question A
-- Question B
-- Question C
-- Question D
-- Question E
-- Question F
-- Question G
-- Question H
-- Question I
-- Question J
-- Question K
 
-# President and Vice President 
+[State Questions](#state-questions)
+- [Question 1 - For](#question-1)
+- [Question 2 - Against](#question-2)
+
+[City Questions](#city-questions)
+- [Question A - For](#question-a)
+- [Question B - For](#question-b)
+- [Question C - For](#question-c)
+- [Question D](#question-d)
+- [Question E](#question-e)
+- [Question F](#question-f)
+- [Question G](#question-g)
+- [Question H](#question-h)
+- [Question I](#question-i)
+- [Question J - For](#question-j)
+- [Question K - Against](#question-k)
+
+
+# Elections
+
+## President and Vice President 
 
 I hope you got your protest vote out in 2016 if that's the sort of thing you're tickled to do. You
 don't have to be happy about how this came to be the only option (I'm certainly not), but grit your
 teeth if you have to, and vote for __Biden and Harris__. None of the secondary candidates have a
 chance of winning, and the current administration needs to go.
 
-# Baltimore City Council President
+## Baltimore City Council President
 
 This is between Nick Mosby and Jovani Patterson. I'm frankly not a huge proponent of either person. 
 If you haven't followed Baltimore and Maryland politics, Nick Mosby has been around for a while, and
@@ -76,7 +84,7 @@ Nick Mosby is definitely qualified, and has served on the city council prior to 
 concerns about him, and electing him to the second most powerful seat in the city shouldn't be done
 blindly. We, the electorate, need to keep an eye and pressure on him.
 
-# Comptroller
+## Comptroller
 I actually had the pleasure to meet Bill Henry when he was running against then-incumbent Joan Pratt
 during the Democratic primary. Comptroller is a very important position in city government, despite
 many people not having any idea what they do. Think of them as the city's main accountant.
@@ -85,7 +93,7 @@ I don't make a habit of rubbing shoulders with bureaucrats, but Bill struck me a
 person. He's also running unopposed. Still, I would recommend voting for him. This is one of the few
 elections I feel no conflict about (and again, not just because he's unopposed).
 
-# City Council Representative
+## City Council Representative
 I live in District 12, so you'll need to look into this a bit more if you live in another. I gave the
 map a quick look, and about half of the districts even have GOP challengers to the Democratic
 candidates.
@@ -112,14 +120,14 @@ candidate to have received the endorsement.
 This is the only competitive city council race in the city. If she wins, it could embolden more
 third-party candidates to run in the future, and really shake up what's possible in the city.
 
-# Baltimore City Mayor
+## Baltimore City Mayor
 The primary races for Mayor were absolutely insane. Last time I made one of these guides, the
 Democratic primary alone took up most of my time, with upwards of 20 candidates.
 
 The general election is much simpler, with essentially three viable options. I'll go from least
 viable to most.
 
-## Shannon Wright (GOP)
+### Shannon Wright (GOP)
 Shannon Wright is running under the GOP ticket. If you look into her stances, they sound decent on
 the surface: focus on education, public safety, and job creation. These are pretty standard lines
 for any conservative candidate. Yet, if you try to dig beneath the surface, the ideas get quite
@@ -135,7 +143,7 @@ advocating for DOJ and HUD to take further steps to stem violent crime.
 
 It's a very anti-poor stance, and doesn't actually address root causes in any way. Hard pass.
 
-## Bob Wallace (Independent)
+### Bob Wallace (Independent)
 I'm not going to spend too much time on this guy, because there doesn't really be much to go off of.
 He hasn't held any office as far as I can tell, and is trying the tired "businessman-to-politician"
 shtick which never really works.
@@ -145,7 +153,7 @@ money. It's meant to improve everything, for everyone. I know, it already doesn'
 But sticking someone in a representative office from a transactional one, and hoping things will
 somehow work out, doesn't make any sense to me. That leaves us with...
 
-## Brandon Scott (Democratic)
+### Brandon Scott (Democratic)
 The current City Council President, Brandon has been in city government for a third of his life, and
 he's 36. I've never interacted with him directly, and while I don't have any glowing recommendations,
 he's definitely the best choice for Mayor.
@@ -162,7 +170,7 @@ power on how funds are spent, and therefore, what happens.
 
 I think Brandon would make a fine mayor. Give him your vote.
 
-# 8th Circuit Court Judges
+## 8th Circuit Court Judges
 I'm sorry for mostly mailing this one in. Judges are not nearly as straightforward to get information
 about. I'm not a lawyer, and I try to stay as far away from the legal profession and anything
 connected to it. Everything I know about Baltimore City judges, I've gleaned from the
@@ -174,18 +182,19 @@ more than seems necessary, so I think he should probably go.
 
 Again, talk to someone else about this.
 
-# US Congress
-I'm in District 7, so it's race between Kweisi Mfume and Kim Klacik. There are two other independent
+## US Congress
+I'm in District 7, so it's race between Kweisi Mfume and Kim Klacik. ~~There are two other independent
 candidates, Amber Ivey and Gary Schuman. No offense to either of the independents, but I've never
 heard their names come up until I started doing more research for this. And in the case of Schuman,
-there's not a lot to go on.
+there's not a lot to go on.~~ **Edit**: Neither of these people ended up on the actual ballot. Ivey is planning
+a run in 2022, so she may be someone to keep an eye on for the future.
 
-If I felt more confidence it wouldn't be a vote tossed into the void, I'd suggest considering Ivey.
+~~If I felt more confidence it wouldn't be a vote tossed into the void, I'd suggest considering Ivey.
 She looks to have a decent professional background beneath her, working in private industry before
 transitioning to the public and non-profit sectors as a data and policy analyst. Definitely not the
-worst kind of person to have in Congress. Also, she's not old.
+worst kind of person to have in Congress. Also, she's not old.~~
 
-I don't say this to come across as ageist. I'm just pretty over the gerontocracy we're currently in.
+~~I don't say this to come across as ageist.~~ I'm just pretty over the gerontocracy we're currently in.
 Representative terms are only two years in theory, but I'm not about to elect anyone in their 70s
 unless their politics are radical. Sadly, Mfume's do not appear to be, at least by current standards.
 
@@ -198,9 +207,56 @@ If you're in another Congressional district, and you might be, please do some re
 election, and if you're reading this, you're not likely to vote for a Republican anyway. But do your
 research. Third party candidates do exist, and can run solid campaigns.
 
-# Court of Special Appeals at Large
+## Court of Special Appeals at Large
 As with the above judges, I don't really know how to find conclusive evidence one way or the other.
 However, looking at Judge Wells' professional history, he seems to have a bent towards equal rights.
 
 I'm voting yes, but I don't feel comfortable saying what anyone else should do.
 
+# State Questions
+
+## Question 1
+This is a state-level change, and an important one to vote FOR on. Currently, the General Assembly is
+only able to reduce the state's budget. This would allow them to increase or redirect funding as well.
+They cannot exceed the total proposed budget put forth by the Governor.
+
+Most state legislatures already operate like this, so this will give the legislature more control over
+state spending.
+
+Maryland's General Assembly is also predominantly Democratic (32 vs 15 in the Senate, 99 vs 42 in the House).
+This would act as a strong counter to Maryland's frequent Republican governors.
+
+## Question 2
+Question 2 is to allow an expansion of commercial gaming to allow betting on sports and events, ostensibly
+to raise money for education. I remember back when the casino expansion happened. They said the same thing
+about that, but in reality, then ended up siphoning money out of education, so it ended up being net neutral.
+While also bringing up the inherent issues with gambling and casinos.
+
+I'm voting AGAINST this one.
+
+I don't care one way or the other. This isn't a moral issue for me. If people want to bet on sports, that's their
+business. I don't want to invite a situation where schools with get even less funding than they already do.
+
+# City Questions
+
+## Question A
+
+## Question B
+
+## Question C
+
+## Question D
+
+## Question E
+
+## Question F
+
+## Question G
+
+## Question H
+
+## Question I
+
+## Question J
+
+## Question K
