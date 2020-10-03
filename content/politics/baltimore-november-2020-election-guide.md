@@ -39,12 +39,12 @@ The questions on this year's ballot are as follows:
 - [Question A - For](#question-a)
 - [Question B - For](#question-b)
 - [Question C - For](#question-c)
-- [Question D](#question-d)
-- [Question E](#question-e)
-- [Question F](#question-f)
-- [Question G](#question-g)
-- [Question H](#question-h)
-- [Question I](#question-i)
+- [Question D - For](#question-d)
+- [Question E - For](#question-e)
+- [Question F - For](#question-f)
+- [Question G - For](#question-g)
+- [Question H - For](#question-h)
+- [Question I - For](#question-i)
 - [Question J - For](#question-j)
 - [Question K - Against](#question-k)
 
@@ -240,23 +240,86 @@ business. I don't want to invite a situation where schools with get even less fu
 # City Questions
 
 ## Question A
+Question A is on an ordinance to allow the Mayor and the City Council to borrow up to $12MM for
+affordable housing initiatives. Having spent a few years here, and seen the prevalence of luxury
+condos go up (with paltry if any affordable housing units), while there is a dearth of general
+affordable housing, and a large volume of vacant buildings throughout large swathes of the city,
+this will almost always be something I support. I think you should too. Vote FOR.
 
 ## Question B
+This is on an ordinance to provide up to $38MM for building new schools, as well as making renovations to
+existing ones. Baltimore schools suffer from several deficiencies. While facilities are only a part
+of it, they are a huge factor. Lead in the water and a lack of proper climate control both make for
+inhospitable environments for the city's children. Vote FOR.
 
 ## Question C
+Voting FOR on this ordinance would allow the Mayor and City Council to borrow up to $38MM for
+economic and community development projects. This sounds a bit vague, but basically, this is money
+for small businesses, parks, and other infrastructure that allows communities to thrive. I personally
+think these are the sort of funds local municipalities should be dispersing, as opposed to that
+development being placed in non-profit and private hands.
 
 ## Question D
+The final bond issue, this provides up to $72MM for public infrastructure. This is anything from
+public parks and fire stations, to library buildings and tree placement. Vote FOR.
+
+A note on the bond issues: I don't know where the city would be borrowing this money from. While
+this is a topic worth investigating further, it is money well spent. All of these projects would
+be public goods. That alone is something worth aspiring to. Private investment, while a source of
+capital, comes with a lot of strings, and tends to exclude certain people.
 
 ## Question E
+This is the first of a number of procedural issues for the city council. This requires a Charter
+Revision Commission to meet __at least__ once every 10 years. Currently, the city charter is
+reviewed on an ad-hoc schedule. With the new requirement, the process would be apolitical. Vote FOR.
 
 ## Question F
+This question is analogous to Question 1 at the state level. Currently, the Baltimore City Council
+has the ability to decrease expenditures, but not reallocate or increase funding. This would allow
+them to have greater control over the budget, serving as an important check against the mayor. Vote
+FOR.
 
 ## Question G
+This resolution would change the threshold for overriding a mayoral veto from 3/4 of the council to
+2/3. In actual terms, this is a change from 12 people to 10. Importantly, it would also separate the
+veto process for appropriation bills (changes to the budget), requiring separate bills to be written
+as opposed to being added as line items to existing bills. Another powerful check on the executive.
+Vote FOR.
 
 ## Question H
+Currently, if the mayor wants to veto a bill, they can choose to do so at a time when the full
+council may be unable to convene. This resolution allows for extra time for the council to convene
+and counter a mayoral veto, if no council meeting was scheduled during the normal veto period.
+
+Given that Baltimore is a strong mayor city, we should opt for as many checks on the executive as
+possible. Vote FOR.
 
 ## Question I
+This measure is on the removal of certain elected officials (council members, city council president,
+mayor, and comptroller). It would allow 3/4 of the council to vote to remove any of the listed
+officials for incompetency, misconduct, willful neglect of office, or a felony or misdemeanor brought
+against them by relevant parties.
+
+Given our unfortunate history of corrupt or neglectful politicians, I think this is an incredibly
+important measure. Let's hold our elected officials to task. Vote FOR.
 
 ## Question J
+This measure would give the city auditor more power to force government employees to produce documents
+for the purposes of an audit. This is a pretty straightforward one to me. Vote FOR.
 
 ## Question K
+I'm conflicted on this last one. If you haven't gathered from my previous recommendations, I have
+serious concerns about executive and, more generally, unelected power. I'm not sure I fully
+understand what the Chief Administration Officer is supposed to do, but it seems a lot like the
+CEO at a for-profit company.
+
+Given that this is an appointed, and not elected position, I'm personally against it. However, I'll
+admit my ignorance. It might be a useful addition. But with a strong executive already, I don't
+feel good giving more power to positions that can't be controlled by the electorate. I don't know
+what the removal criteria is for this role (I assume the mayor or city council president would remove
+them if needed).
+
+I'm voting AGAINST.
+
+Hopefully this guide was somewhat useful to anyone who read it. I'll work on making these more
+thorough and less editorial in the future. But it's hard to be objective in our current timeline.
