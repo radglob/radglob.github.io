@@ -3,7 +3,6 @@ categories = ["baltimore", "elections"]
 date = "2020-09-28T00:00:00-05:00"
 tags = ["baltimore", "elections"]
 title = "November 2020 Election Guide for Baltimore"
-draft = true
 +++
 
 I've written my own little field guides to elections in past years, and distributed them to some
