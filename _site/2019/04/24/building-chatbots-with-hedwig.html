@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Building chatbots with Hedwig. | Everything Awesome</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Building chatbots with Hedwig." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Chatbots are so 2018. I think they were definitely a fad which has seemed to die down. That said, they’re still pretty useful." />
+<meta property="og:description" content="Chatbots are so 2018. I think they were definitely a fad which has seemed to die down. That said, they’re still pretty useful." />
+<link rel="canonical" href="http://localhost:4000/blog/2019/04/24/building-chatbots-with-hedwig.html" />
+<meta property="og:url" content="http://localhost:4000/blog/2019/04/24/building-chatbots-with-hedwig.html" />
+<meta property="og:site_name" content="Everything Awesome" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-04-24T20:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Building chatbots with Hedwig." />
+<meta name="twitter:site" content="@" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2019-04-24T20:00:00-04:00","datePublished":"2019-04-24T20:00:00-04:00","description":"Chatbots are so 2018. I think they were definitely a fad which has seemed to die down. That said, they’re still pretty useful.","headline":"Building chatbots with Hedwig.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/2019/04/24/building-chatbots-with-hedwig.html"},"url":"http://localhost:4000/blog/2019/04/24/building-chatbots-with-hedwig.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog/feed.xml" title="Everything Awesome" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Everything Awesome</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Building chatbots with Hedwig.</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-04-24T20:00:00-04:00" itemprop="datePublished">Apr 24, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Chatbots are so 2018. I think they were definitely a fad which has seemed to die
+down. That said, they’re still pretty useful.</p>
+
+<p>I found myself needing to write one. These days, I mostly work in Elixir. So
+after looking around for a chatbot framework, I came across
+<a href="http://github.com/hedwig-im/hedwig">Hedwig</a>. It’s an Elixir (check) chatbot
+framework (check) with a cool name and logo (check check). I assume it’s named
+after an owl from some book I didn’t read as a kid.</p>
+
+<p>Taking a look at the documentation, I could see it was a little out-of-date with
+regards to Elixir and how supervision trees are used. It took me a bit of time
+to parse through their docs to get this running, so I figured I’d do a quick
+writeup to save myself the confusion again in the future.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+<p>Creating a new project with Hedwig is pretty easy. First, you’ll want to create
+a new Elixir project with a supervision tree. <code class="language-plaintext highlighter-rouge">mix</code> makes this simple if you’re
+unfamiliar with how to set this up yourself.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mix new chatbot --sup
+</code></pre></div></div>
+
+<p>Next, we’ll need to add the Hedwig dependency to our <code class="language-plaintext highlighter-rouge">mix.exs</code> file.</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># mix.exs</span>
+<span class="k">defmodule</span> <span class="no">Chatbot</span><span class="o">.</span><span class="no">MixProject</span> <span class="k">do</span>
+  <span class="kn">use</span> <span class="no">Mix</span><span class="o">.</span><span class="no">Project</span>
+
+  <span class="k">def</span> <span class="n">project</span> <span class="k">do</span>
+    <span class="p">[</span>
+      <span class="ss">app:</span> <span class="ss">:chatbot</span><span class="p">,</span>
+      <span class="ss">version:</span> <span class="s2">"0.1.0"</span><span class="p">,</span>
+      <span class="ss">elixir:</span> <span class="s2">"~&gt; 1.7"</span><span class="p">,</span>
+      <span class="ss">start_permanent:</span> <span class="no">Mix</span><span class="o">.</span><span class="n">env</span><span class="p">()</span> <span class="o">==</span> <span class="ss">:prod</span><span class="p">,</span>
+      <span class="ss">deps:</span> <span class="n">deps</span><span class="p">()</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="n">application</span> <span class="k">do</span>
+    <span class="p">[</span>
+      <span class="ss">extra_applications:</span> <span class="p">[</span><span class="ss">:logger</span><span class="p">],</span>
+      <span class="ss">mod:</span> <span class="p">{</span><span class="no">Chatbot</span><span class="o">.</span><span class="no">Application</span><span class="p">,</span> <span class="p">[]}</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+
+  <span class="k">defp</span> <span class="n">deps</span> <span class="k">do</span>
+    <span class="p">[</span>
+      <span class="p">{</span><span class="ss">:hedwig</span><span class="p">,</span> <span class="s2">"~&gt; 1.0"</span><span class="p">}</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Run <code class="language-plaintext highlighter-rouge">mix deps.get</code> to install Hedwig. Now we can create our chatbot. The
+skeleton of it, at least.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> mix hedwig.gen.robot
+
+Welcome to the Hedwig Robot Generator!
+
+Let<span class="s1">'s get started.
+
+What would you like to name your bot?: testrobot
+Available adapters
+
+1. Hedwig.Adapters.Console
+2. Hedwig.Adapters.Test
+
+Please select an adapter: 1
+* creating lib/chatbot
+* creating lib/chatbot/robot.ex
+* updating config/config.exs
+
+Don'</span>t forget to add your new robot to your supervision tree
+<span class="o">(</span>typically <span class="k">in </span>lib/chatbot.ex<span class="o">)</span>:
+
+    worker<span class="o">(</span>Chatbot.Robot, <span class="o">[])</span>
+</code></pre></div></div>
+
+<p>This last part is a bit outdated. Instead of using <code class="language-plaintext highlighter-rouge">worker/2</code>, we’re just going
+to add our chatbot as a child of our supervision process.</p>
+
+<p>Let’s update <code class="language-plaintext highlighter-rouge">lib/chatbot/application.ex</code> to add our new chatbot to the
+supervision tree.</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># lib/chatbot/application.ex</span>
+<span class="k">defmodule</span> <span class="no">Chatbot</span><span class="o">.</span><span class="no">Application</span> <span class="k">do</span>
+  <span class="nv">@moduledoc</span> <span class="no">false</span>
+
+  <span class="kn">use</span> <span class="no">Application</span>
+
+  <span class="k">def</span> <span class="n">start</span><span class="p">(</span><span class="n">_type</span><span class="p">,</span> <span class="n">_args</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">children</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="c1"># Add your chatbot here.</span>
+      <span class="p">{</span><span class="no">Chatbot</span><span class="o">.</span><span class="no">Robot</span><span class="p">,</span> <span class="p">[]}</span>
+    <span class="p">]</span>
+
+    <span class="n">opts</span> <span class="o">=</span> <span class="p">[</span><span class="ss">strategy:</span> <span class="ss">:one_for_one</span><span class="p">,</span> <span class="ss">name:</span> <span class="no">Chatbot</span><span class="o">.</span><span class="no">Supervisor</span><span class="p">]</span>
+    <span class="no">Supervisor</span><span class="o">.</span><span class="n">start_link</span><span class="p">(</span><span class="n">children</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>That’s all we need to do to get this going. We set up our chatbot to use
+<code class="language-plaintext highlighter-rouge">Hedwig.Adapters.Console</code>, so we can test this without hooking it up to Slack or
+some other service.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> mix run <span class="nt">--no-halt</span>
+
+Hedwig Console - press Ctrl+C to exit.
+
+The console adapter is useful <span class="k">for </span>quickly verifying how your
+bot will respond based on the current installed responders
+
+<span class="o">&gt;</span>
+</code></pre></div></div>
+
+<p>In this prompt, we can test that this thing works. By default, the chatbot
+generator will have included <code class="language-plaintext highlighter-rouge">Hedwig.Responders.Help</code> and
+<code class="language-plaintext highlighter-rouge">Hedwig.Responders.Ping</code>. Both of these responders use <code class="language-plaintext highlighter-rouge">respond/2</code>, which
+requires that you identify the chatbot by name. In this case, our chatbot is
+called <code class="language-plaintext highlighter-rouge">testrobot</code>.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> testrobot <span class="nb">help
+</span>testrobot&gt; testrobot <span class="nb">help</span> - Displays all of the <span class="nb">help </span>commands that testrobot knows about.
+testrobot <span class="nb">help</span> &lt;query&gt; - Displays all <span class="nb">help </span>commands that match &lt;query&gt;.
+testrobot: ping - Responds with <span class="s1">'pong'</span>
+testrobot <span class="nb">test</span> - Echos <span class="s2">"Wow"</span> when the user enters <span class="s2">"test"</span>
+
+<span class="o">&gt;</span> testrobot ping
+testrobot&gt; user: pong
+</code></pre></div></div>
+
+<p>Great, it works. Now let’s write our own responder.</p>
+
+<h2 id="responders">Responders</h2>
+
+<p>Responders are the part of the Hedwig framework that specify how chatbots
+interpret and respond to messages. Let’s write a quick “Hello, World!” example.</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># lib/chatbot/responders/hello_world.ex</span>
+<span class="k">defmodule</span> <span class="no">Chatbot</span><span class="o">.</span><span class="no">Responders</span><span class="o">.</span><span class="no">HelloWorld</span> <span class="k">do</span>
+  <span class="kn">use</span> <span class="no">Hedwig</span><span class="o">.</span><span class="no">Responder</span>
+
+  <span class="nv">@usage</span><span class="sd">"""
+  hedwig hello - Echos "world" when the user says "hello".
+  """</span>
+  <span class="n">hear</span> <span class="sr">~r/hello$/i</span><span class="p">,</span> <span class="n">msg</span> <span class="k">do</span>
+    <span class="n">reply</span> <span class="n">msg</span><span class="p">,</span> <span class="s2">"world"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>We can add this to our chatbot in <code class="language-plaintext highlighter-rouge">config/config.exs</code>.</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># config/config.exs</span>
+<span class="kn">use</span> <span class="no">Mix</span><span class="o">.</span><span class="no">Config</span>
+
+<span class="n">config</span> <span class="ss">:chatbot</span><span class="p">,</span> <span class="no">Chatbot</span><span class="o">.</span><span class="no">Robot</span><span class="p">,</span>
+  <span class="ss">adapter:</span> <span class="no">Hedwig</span><span class="o">.</span><span class="no">Adapters</span><span class="o">.</span><span class="no">Console</span><span class="p">,</span>
+  <span class="ss">name:</span> <span class="s2">"testrobot"</span><span class="p">,</span>
+  <span class="ss">aka:</span> <span class="s2">"/"</span><span class="p">,</span>
+  <span class="ss">responders:</span> <span class="p">[</span>
+    <span class="p">{</span><span class="no">Hedwig</span><span class="o">.</span><span class="no">Responders</span><span class="o">.</span><span class="no">Help</span><span class="p">,</span> <span class="p">[]},</span>
+    <span class="p">{</span><span class="no">Hedwig</span><span class="o">.</span><span class="no">Responders</span><span class="o">.</span><span class="no">Ping</span><span class="p">,</span> <span class="p">[]},</span>
+    <span class="p">{</span><span class="no">Chatbot</span><span class="o">.</span><span class="no">Responders</span><span class="o">.</span><span class="no">HelloWorld</span><span class="p">,</span> <span class="p">[]}</span>
+  <span class="p">]</span>
+</code></pre></div></div>
+
+<p>The other two responders in the configuration are the defaults Hedwig adds on
+creation. You can remove them if you want.</p>
+
+<p>Now, if we run the chatbot again with <code class="language-plaintext highlighter-rouge">mix run --no-halt</code>, we can test our new
+commmand.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> hello
+testrobot&gt; world
+<span class="o">&gt;</span> Hello
+testrobot&gt; world
+<span class="o">&gt;</span> HeLlO
+testrobot&gt; world
+</code></pre></div></div>
+
+<p>Great! Notice that this command isn’t namespaced. What I mean that is we aren’t
+required to specify what chatbot we want to respond. This is how the <code class="language-plaintext highlighter-rouge">hear/4</code>
+macro works. Our chatbots will listen to any message coming over the wire, and
+respond when it matches, even if it wasn’t addressed to them.</p>
+
+<p>In most cases, we’ll want our commands to be addressed. We can fix this with a
+quick change.</p>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># lib/chatbot/responders/hello_world.ex</span>
+
+<span class="o">-</span> <span class="n">hear</span> <span class="sr">~r/hello$/i</span><span class="p">,</span> <span class="n">msg</span> <span class="k">do</span>
+<span class="o">+</span> <span class="n">respond</span> <span class="sr">~r/hello$/i</span><span class="p">,</span> <span class="n">msg</span> <span class="k">do</span>
+    <span class="n">reply</span> <span class="n">msg</span><span class="p">,</span> <span class="s2">"world"</span>
+  <span class="k">end</span>
+</code></pre></div></div>
+
+<p>Now, if we run our chatbot, it will only respond to the <code class="language-plaintext highlighter-rouge">hello</code> command if we
+say its name first (<code class="language-plaintext highlighter-rouge">testrobot</code>, if you forgot).</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> hello
+<span class="o">&gt;</span> testrobot hello
+testrobot&gt; world
+</code></pre></div></div>
+
+<p>That’s the basics of creating a chatbot with Hedwig. Next, we’ll look at how to
+manage conversational state, which is useful if you want users to feel like
+they’re having a conversation and not sending one-off messages.</p>
+
+  </div><a class="u-url" href="/blog/2019/04/24/building-chatbots-with-hedwig.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Everything Awesome</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Everything Awesome</li><li><a class="u-email" href="mailto:mailto:hello@radglob.com">mailto:hello@radglob.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Longer screeching about things I at least think I understand.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

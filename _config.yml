@@ -1,0 +1,14 @@
+url: https://radglob.com
+baseurl: /blog
+title: Everything Awesome
+theme: minima
+paginate: 5
+
+email: "mailto:hello@radglob.com"
+twitter: "https://twitter.com/radglob"
+description: "Longer screeching about things I at least think I understand."
+github: "https://github.com/radglob"
+
+plugins:
+  - jekyll-paginate
+
